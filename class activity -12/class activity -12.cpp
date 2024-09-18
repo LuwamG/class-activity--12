@@ -7,12 +7,17 @@ int main()
 {
     int factorial=1;
     int n;
-    cout << "Enter the number: ";
+    cout << "Enter a postive number: ";
     cin >> n;
-    for (int i = 1; i <= n; i++) {
-        factorial = factorial * i;  
+    if (n < 0) {
+        cout << "This is not a postive number" << endl;
+    } 
+    else {
+        for (int i = 1; i <= n; i++) {
+            factorial = factorial * i;
+        }
+        cout << "The factorial of " << n << " is " << factorial << endl;
     }
-    cout << "The factorial of " << n << " is " <<  factorial <<endl;
     return 0;
 }
 
